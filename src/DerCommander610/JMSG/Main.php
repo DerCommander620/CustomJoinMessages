@@ -20,7 +20,7 @@ class Main extends PLuginBase implements Listener{
         $this->getResource("config.yml");
         if($sender->setJoinMessage($this->getConfig()->get("JoinMessage"))){
     }
-    public function onQuitPlayer(PlayerQuitEvent $event) {
+    protected function onQuitPlayer(PlayerQuitEvent $event) {
         $event->setMessage("§cDer Spieler" . $event->getPlayer()->getName() . "ist offline gegangen");
         @mkdir($this->getDataFolder());
         $this->getResource("config.yml")
