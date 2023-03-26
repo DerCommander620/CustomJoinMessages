@@ -13,11 +13,6 @@ use pocketmine\event\player\PlayerJoinEvent;
 class Main extends PLuginBase implements Listener{
 
     public function onEnable() {
-        $this->getLogger()->info(C::Green . "Join msgs geladen");
-    }
-
-    public function onDisable(){
-        $this->getLogger()->info(C::Red "Join messages ausgeschaltet!");
     }
 
     public function onJoinPlayer(PlayerJoinEvent $event) {
