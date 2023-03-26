@@ -12,7 +12,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 
 class Main extends PluginBase implements Listener{
 
-    public function onEnable() {
+    public function onEnable(): void {
     }
     public function onJoinPlayer(PlayerJoinEvent $event) {
         $event->setMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
