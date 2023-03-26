@@ -15,6 +15,6 @@ class Main extends PluginBase implements Listener{
     }
     public function onJoinPlayer(PlayerJoinEvent $event) 
     {
-        $this->setJoinMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
+        $event->setJoinMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
     }
 }
