@@ -21,6 +21,6 @@ class Main extends PluginBase implements Listener{
         if($this->setJoinMessage($this->getConfig()->get("JoinMessage"))){
            }
         }
-        return true;
     }
+    return true;
 }
