@@ -15,11 +15,6 @@ class Main extends PluginBase implements Listener{
     }
     public function onJoinPlayer(PlayerJoinEvent $event) {
         $this->sendMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
-        $event->setJoinMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
-        @mkdir($this->getDataFolder());
-        $this->getResource("config.yml");
-        if ($this->setJoinMessage($this->getConfig()->get("JoinMessage"))){
-        }
         return true;
     }
 }
