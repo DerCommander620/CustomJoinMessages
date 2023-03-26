@@ -19,7 +19,6 @@ class Main extends PluginBase implements Listener{
         @mkdir($this->getDataFolder());
         $this->getResource("config.yml");
         if($this->setJoinMessage($this->getConfig()->get("JoinMessage"))){
-           }
         }
     }
     return true;
