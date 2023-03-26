@@ -19,8 +19,7 @@ class Main extends PLuginBase implements Listener{
         @mkdir($this->getDataFolder());
         $this->getResource("config.yml");
         if($sender->setJoinMessage($this->getConfig()->get("JoinMessage"))){
-    }
         }
-    return true;
+        return true;
     }
 }
