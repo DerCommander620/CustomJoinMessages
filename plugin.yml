@@ -1,0 +1,5 @@
+name: CustomJoin
+version: 1.0.0
+main: DerCommander610\JMSG\Main
+api: [4.17.1]
+author: DerCommander610
