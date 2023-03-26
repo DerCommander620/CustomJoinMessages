@@ -2,7 +2,7 @@
 
 namespace DerCommander610\JMSG;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat as C;
 use puocketmine\plugin\PluginBase;
@@ -10,7 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PLayerQuitEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 
-class Main extends PLuginBase implements Listener{
+class Main extends PluginBase implements Listener{
 
     public function onEnable() {
     }
