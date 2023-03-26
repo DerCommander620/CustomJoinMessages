@@ -18,7 +18,7 @@ class Main extends PLuginBase implements Listener{
     public function onJoinPlayer(PlayerJoinEvent $event) {
         $event->setMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
         @mkdir($this->getDataFolder());
-        $this->getResource("config.yml")
+        $this->getResource("config.yml");
         if($sender->setJoinMessage($this->getConfig()->get("JoinMessage")))
     }
 
