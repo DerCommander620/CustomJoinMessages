@@ -13,8 +13,8 @@ class Main extends PluginBase implements Listener{
 
     public function onEnable(): void {
     }
-    public function onJoinPlayer(PlayerJoinEvent $event) {
-        $this->sendMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
-        return true;
+    public function onJoinPlayer(PlayerJoinEvent $event) 
+    {
+        $this->setJoinMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
     }
 }
