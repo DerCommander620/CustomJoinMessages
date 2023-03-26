@@ -20,6 +20,6 @@ class Main extends PluginBase implements Listener{
         $this->getResource("config.yml");
         if($this->setJoinMessage($this->getConfig()->get("JoinMessage"))){
         }
+        return true;
     }
-    return true;
 }
