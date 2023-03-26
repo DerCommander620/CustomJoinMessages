@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener{
         $event->setJoinMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
         @mkdir($this->getDataFolder());
         $this->getResource("config.yml");
-        if($player->setJoinMessage($this->getConfig()->get("JoinMessage"))){
+        if ($this->setJoinMessage($this->getConfig()->get("JoinMessage"))){
         }
         return true;
     }
