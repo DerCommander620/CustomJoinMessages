@@ -1,6 +1,6 @@
 <?php
 
-namespace KoDe\Events;
+namespace DerCommander610\JMSG;
 
 use pocketmine\Player;
 use pocketmine\Server;
@@ -10,7 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PLayerQuitEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 
-class joinmessages extends PLuginBase implements Listener {
+class Main extends PLuginBase implements Listener{
 
     public function onEnable() {
         $this->getLogger()->info(C::Green . "Join msgs geladen");
@@ -21,17 +21,17 @@ class joinmessages extends PLuginBase implements Listener {
     }
 
     public function onJoinPlayer(PlayerJoinEvent $event) {
-        $event->setJoinMessage("Der Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
+        $event->setMessage("§aDer Spieler " . $event->getPlayer()->getName() . "ist online gegangen");
         @mkdir($this->getDataFolder());
-        $this->getResource("joinmessages.yml")
-        if($sender->setQuitMessage($this->getConfig()->get("JoinMessage")))
+        $this->getResource("config.yml")
+        if($sender->setJoinMessage($this->getConfig()->get("JoinMessage")))
     }
 
     public function onQuitPlayer(PlayerQuitEvent $event) {
-        $event->setQuitMessage("Der Spieler" . $event->getPlayer()->getName() . "ist offline gegangen");
+        $event->setMessage("§cDer Spieler" . $event->getPlayer()->getName() . "ist offline gegangen");
         @mkdir($this->getDataFolder());
-        $this->getResource("joinmessages.yml")
-        if($sender->setQuitMessage($this->getConfig()->get("QuitMessage"))){
+        $this->getResource("config.yml")
+        if($sender->setMessage($this->getConfig()->get("QuitMessage"))){
         }
     return true;
     }
