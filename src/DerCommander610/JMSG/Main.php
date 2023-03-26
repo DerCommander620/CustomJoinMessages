@@ -5,7 +5,7 @@ namespace DerCommander610\JMSG;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat as C;
-use puocketmine\plugin\PluginBase;
+use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PLayerQuitEvent;
 use pocketmine\event\player\PlayerJoinEvent;
